@@ -8,9 +8,9 @@ Gem::Specification.new do |spec|
   spec.version       = Totango::VERSION
   spec.authors       = ["Matt Gillooly"]
   spec.email         = ["matt@swipely.com"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
-  spec.homepage      = ""
+  spec.description   = %q{Ruby client for sending events to Totango}
+  spec.summary       = %q{Sends events from your application to Totango}
+  spec.homepage      = "http://github.com/swipely/totango"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files`.split($/)
