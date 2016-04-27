@@ -25,7 +25,7 @@ module Totango
         :sdr_odn => account_name, # A human readable name for the account (will be used on Totango’s UI and reports)
         :sdr_a => activity, # Name of the activity the user performed
         :sdr_m => self.module, # Name of the module the user is using within the application
-      }
+      }.reject { |k,v| v.nil? || v.empty? }
     end
 
     def to_url
