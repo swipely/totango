@@ -6,7 +6,7 @@ describe Totango::Event do
     subject {
       described_class.new({
         :service_id => "SP-xxxxyy",
-        :account_id => "u12214",
+        :account_id => 12214,
         :account_name => "Barksdale+Industries",
         :username => "avon@barksdale.com",
         :activity => "Login",
@@ -18,7 +18,7 @@ describe Totango::Event do
       it "builds a query hash for a Totango pixel URL" do
         expect( subject.query_options ).to eq({
           :sdr_s => "SP-xxxxyy",
-          :sdr_o => "u12214",
+          :sdr_o => 12214,
           :sdr_odn => "Barksdale+Industries",
           :sdr_u => "avon@barksdale.com",
           :sdr_a => "Login",
@@ -37,7 +37,7 @@ describe Totango::Event do
         query_options = Hash[URI.decode_www_form(url.query)]
         expect( query_options ).to eq({
           "sdr_s" => "SP-xxxxyy",
-          "sdr_o" => "u12214",
+          "sdr_o" => "12214",
           "sdr_odn" => "Barksdale+Industries",
           "sdr_u" => "avon@barksdale.com",
           "sdr_a" => "Login",
