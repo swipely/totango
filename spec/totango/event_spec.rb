@@ -9,7 +9,13 @@ describe Totango::Event do
       :account_name => "Barksdale+Industries",
       :username => "avon@barksdale.com",
       :activity => "Login",
-      :module => "Application"
+      :module => "Application",
+      :user_attributes => {
+        :name => "John Doe"
+      },
+      :account_attributes => {
+        :account_type => 'Demo'
+      }
     })
   }
 
@@ -21,7 +27,9 @@ describe Totango::Event do
         :sdr_odn => "Barksdale+Industries",
         :sdr_u => "avon@barksdale.com",
         :sdr_a => "Login",
-        :sdr_m => "Application"
+        :sdr_m => "Application",
+        :"sdr_u.name" => "John Doe",
+        :"sdr_o.account_type" => "Demo"
       })
     end
   end
@@ -40,7 +48,9 @@ describe Totango::Event do
         "sdr_odn" => "Barksdale+Industries",
         "sdr_u" => "avon@barksdale.com",
         "sdr_a" => "Login",
-        "sdr_m" => "Application"
+        "sdr_m" => "Application",
+        "sdr_u.name" => "John Doe",
+        "sdr_o.account_type" => "Demo"
       })
     end
   end
